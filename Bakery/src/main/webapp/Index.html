@@ -4,13 +4,14 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Index Page</title>
-<link href="IndexPage.css" rel="stylesheet" />
+<link href="Index.css" rel="stylesheet" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	
+
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script
@@ -22,50 +23,158 @@
 <body>
 	<div id="indexBody">
 		<div class="container-fluid">
-			<div id="indexHeader">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12">
-						<nav class="navbar navbar-expand bg-dark">
+			<div class="row-fluid">
+				<div id="indexHeader" style="height:40px;">
+					<div class="col-md-12">
+						<nav class="navbar navbar-expand" style="position:fixed;top:0;left:0;z-index:10;background:white">
 							<!--Body Logo  -->
 							<div class="col-lg-2 col-md-2 col-sm-2">
-								<div style="height: 30px; width: 150px;color:Orange">									
+								<div style="height: 30px; width: 150px; color: blue">
 									<h3>KKFoodKart</h3>
-								</div>									
+								</div>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-4">
-								<!--Search Bar  -->
-								<div class="input-group"> 
-									<input type="text" class="form-control" id="searchBar" aria-describedby="search-icon" style="width:300px;border-radius:26px;height:40px">
-									<div class="input-group-append" style="align-item:center">
-										<span class="input-group-append" id="search-icon">
-										<i class="fas fa-search"></i>
-										</span>
+								<div class="container">
+									<div class="row justify-content-center">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Search"
+												style="border-radius: 25px; z-index: 1">
+											<div class="input-group-append">
+												<button class="btn btn-primary" type="button"
+													style="width: 50px; border-radius: 20px; margin-left: -41px;">
+													<i class="fa fa-search"></i>
+												</button>
+											</div>
+										</div>
 									</div>
-								</div>								
+								</div>
+
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-4"></div>
-							
-
-
 							<div class="col-lg-1 col-md-1 col-sm-1">
-								<input type="button" class="btn btn-secondary"
+								<input type="button" class="btn btn-primary"
 									style="border: none" name="loginBtn" id="login" value="login">
 							</div>
 							<div class="col-lg-1 col-md-1 col-sm-1">
-								<input type="button" class="btn btn-secondary"
+								<input type="button" class="btn btn-primary"
 									style="border: none" name="registerBtn" id="register"
 									value="signup">
 							</div>
 						</nav>
 					</div>
-
 				</div>
 			</div>
 			<!-- //body content -->
 			<div id="indexContent">
-				<div class="row">
+				<div class="row mt-3">
 					<div class="col-lg-12 col-md-12 col-sm-12">
-						<div style="height: 500px; width: 500px; background-color: aqua"></div>
+						<!--Content Search Bar  -->
+						<!-- Breads category -->
+						<div class="row ml-3">
+							<p>Only Breads</p>
+						</div>
+						<div class="row">
+							<div class="col-lg-3">
+								<a href="#"> <img src="Breads/Bread1.jpg" alt="bread1"
+									style="height: 200px; width: 200px">
+									<p>Price 100</p>
+								</a>
+								<div class="act mb-2">
+									<button id="addCart1">AddToCart</button>
+									<button id="buyIt1">BuyITNow</button>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<a href="#"> <img src="Breads/Bread2.jpg" alt="bread2"
+									style="height: 200px; width: 200px">
+									<p>Price 100</p>
+								</a>
+								<div class="act mb-2">
+									<button id="addCart2">AddToCart</button>
+									<button id="buyIt2">BuyITNow</button>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<a href="#"> <img src="Breads/bread3.jpg" alt="bread3"
+									style="height: 200px; width: 200px">
+									<p>Price 100</p>
+								</a>
+								<div class="act mb-2">
+									<button id="addCart3">AddToCart</button>
+									<button id="buyIt3">BuyITNow</button>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<a href="#"> <img src="Breads/bread4.jpg" alt="bread4"
+									style="height: 200px; width: 200px">
+									<p>Price 100</p>
+								</a>
+								<div class="act mb-2">
+									<button id="addCart4">AddToCart</button>
+									<button id="buyIt4">BuyITNow</button>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-3">
+								<a href="#"> <img src="Breads/bread5.jpg" alt="bread1"
+									style="height: 200px; width: 200px">
+									<p>Price 100</p>
+								</a>
+								<div class="act mb-2">
+									<button id="addCart5">AddToCart</button>
+									<button id="buyIt5">BuyITNow</button>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<a href="#"> <img src="Breads/bread6.jfif" alt="bread2"
+									style="height: 200px; width: 200px">
+									<p>Price 100</p>
+								</a>
+								<div class="act mb-2">
+									<button id="addCart6">AddToCart</button>
+									<button id="buyIt6">BuyITNow</button>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<a href="#"> <img src="Breads/bread7.jfif" alt="bread3"
+									style="height: 200px; width: 200px">
+									<p>Price 100</p>
+								</a>
+								<div class="act mb-2">
+									<button id="addCart7">AddToCart</button>
+									<button id="buyIt7">BuyITNow</button>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<a href="#"> <img src="Breads/bread8.jfif" alt="bread4"
+									style="height: 200px; width: 200px">
+									<p>Price 100</p>
+								</a>
+								<div class="act mb-2">
+									<button id="addCart8">AddToCart</button>
+									<button id="buyIt8">BuyITNow</button>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- Cake Category -->
+
+					</div>
+				</div>
+			</div>
+			<!-- Footer Content -->
+			<div id="footer">
+				<div class="container-fluid mt-4">
+					<div class="row"
+						style="background: yellow; height: 50px; position: sticky; width: 100%">
+						<div class="col-lg-6">
+							<p>Personal website for Bakery Application</p>
+						</div>
+						<div class="col-lg-6">
+							<p>Reach out to Kamalakantadas27@gmail.com</p>
+						</div>
 					</div>
 				</div>
 			</div>
