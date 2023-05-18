@@ -1,3 +1,7 @@
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.*;
+
 
 public class Register {
 	private String name;
@@ -28,5 +32,9 @@ public class Register {
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
-	connect
+	Connection con = DriverManager.getConnection("");
+	
+	
+	Statement st = con.createStatement();
+	ResultSet rs = st.executeUpdate("");
 }
