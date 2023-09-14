@@ -32,9 +32,9 @@ public class Register {
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
-	Connection con = DriverManager.getConnection("");
-	
-	
-	Statement st = con.createStatement();
-	ResultSet rs = st.executeUpdate("");
+//	Connection con = DriverManager.getConnection("");
+//	
+//	
+//	Statement st = con.createStatement();
+//	ResultSet rs = st.executeUpdate("");
 }
