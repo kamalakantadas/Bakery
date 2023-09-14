@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 		String userPwd = "kanta25";
 		// Retrieve user input from the form
 		String uName = request.getParameter("username");
-		String UPwd = request.getParameter("password");
+		String uPwd = request.getParameter("password");
 		PrintWriter out = response.getWriter();
 		//out.print("check");
 		try {
@@ -40,11 +40,13 @@ public class LoginServlet extends HttpServlet {
 		}
 		try {
 			Connection con = DriverManager.getConnection(conURL, userName, userPwd);
-			String query = "Select * from usersList where USERNAME=? and PASSWORD=?";
+			//String query = "Select * from emp where ename=? and job=?";
+			String query ="select * from listofuser where email=?";
 			PreparedStatement st = con.prepareStatement(query);
-			//out.print("recheck");
+			
 			st.setString(1, uName);
-			st.setString(2, UPwd);
+			//st.setString(2, uPwd);
+			
 			ResultSet rs = st.executeQuery();
 			if(rs.next()) {
 				out.print("True only"+rs.getString(2));
@@ -52,7 +54,7 @@ public class LoginServlet extends HttpServlet {
 //                session.setAttribute("username", uName);
 //                response.sendRedirect("Index.jsp"); // Redirect to a welcome page
             } else {
-                // Login failed
+                // Login failed         
                 response.sendRedirect("login.jsp?loginFailed=true"); // Redirect to login page with an error message
             }
 
