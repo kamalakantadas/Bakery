@@ -41,18 +41,18 @@ public class LoginServlet extends HttpServlet {
 		try {
 			Connection con = DriverManager.getConnection(conURL, userName, userPwd);
 			//String query = "Select * from emp where ename=? and job=?";
-			String query ="select * from listofuser where email=?";
+			String query ="select * from listofuser where username=? and password=?";
 			PreparedStatement st = con.prepareStatement(query);
 			
 			st.setString(1, uName);
-			//st.setString(2, uPwd);
+			st.setString(2, uPwd);
 			
 			ResultSet rs = st.executeQuery();
 			if(rs.next()) {
 				out.print("True only"+rs.getString(2));
-//                HttpSession session = request.getSession();
-//                session.setAttribute("username", uName);
-//                response.sendRedirect("Index.jsp"); // Redirect to a welcome page
+                HttpSession session = request.getSession();
+                session.setAttribute("username", uName);
+                response.sendRedirect("Index.jsp"); // Redirect to a welcome page
             } else {
                 // Login failed         
                 response.sendRedirect("login.jsp?loginFailed=true"); // Redirect to login page with an error message
